@@ -21,6 +21,17 @@
                             </config>
                         </TCEforms>
                     </onecol>
+
+                    <col1classes>
+                        <TCEforms>
+                            <label>LLL:EXT:grid_for_gridelements/Resources/Private/Language/locallang.xlf:grid.classes.col1</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectMultipleSideBySide</renderType>
+                                <itemsProcFunc>SchmidtWebmedia\GridForGridElements\Controller\GridController->getClassesOptions</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </col1classes>
                 </el>
             </ROOT>
         </col>

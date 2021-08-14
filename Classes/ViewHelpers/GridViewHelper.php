@@ -38,9 +38,9 @@ class GridViewHelper extends AbstractViewHelper
                 $ratio = self::readXML($this->arguments['colFlexform'], $layout);
                 $index = $this->arguments['colIndex'];
 				if(isset(self::$GridConfiguration['cols'][0][$layout][$ratio]['class'][$index])) {
-					return self::$GridConfiguration['cols'][0][$layout][$ratio]['class'][$index];
+				  return self::$GridConfiguration['cols'][0][$layout][$ratio]['class'][$index].self::addClasses($this->arguments['colFlexform'], $index);
 				} else {
-						return 'col';
+				  return 'col'.self::addClasses($this->arguments['colFlexform'], $index);
                 }
         }
 
@@ -67,5 +67,21 @@ class GridViewHelper extends AbstractViewHelper
             return $xml['data']['col']['lDEF'][$layout]['vDEF'];
         }
         return null;
+    }
+    
+    /**
+     * @param $xmlString
+     * @param $index
+     *
+     * @return string|null
+     */
+    private static function addClasses($xmlString, $index) {
+      if($xmlString !== null) {
+        $xml = GeneralUtility::xml2array($xmlString);
+        if (!$xml['data']['col']['lDEF']['col'.($index+1).'classes']['vDEF'])
+          return '';
+        return ' '.str_replace(',', ' ', $xml['data']['col']['lDEF']['col'.($index+1).'classes']['vDEF']);
+      }
+      return '';
     }
 }

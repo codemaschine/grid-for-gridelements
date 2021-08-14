@@ -103,5 +103,13 @@
     {
       "class": "row"
     }
+  ],
+  "classes": [
+            ["no margin", "m-0"],
+            ["no padding", "p-0"],
+            ["hide all at first", "d-none"],
+            ["hide desktop", "d-lg-none"],
+            ["show block on desktop", "d-lg-block"],
+            ["show vertical filled flex on desktop", "d-lg-flex flex-column"]
   ]
 }

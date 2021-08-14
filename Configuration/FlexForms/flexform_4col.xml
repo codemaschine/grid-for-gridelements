@@ -21,6 +21,50 @@
                             </config>
                         </TCEforms>
                     </fourthcol>
+
+                    <col1classes>
+                        <TCEforms>
+                            <label>LLL:EXT:grid_for_gridelements/Resources/Private/Language/locallang.xlf:grid.classes.col1</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectMultipleSideBySide</renderType>
+                                <itemsProcFunc>SchmidtWebmedia\GridForGridElements\Controller\GridController->getClassesOptions</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </col1classes>
+
+                    <col2classes>
+                        <TCEforms>
+                            <label>LLL:EXT:grid_for_gridelements/Resources/Private/Language/locallang.xlf:grid.classes.col2</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectMultipleSideBySide</renderType>
+                                <itemsProcFunc>SchmidtWebmedia\GridForGridElements\Controller\GridController->getClassesOptions</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </col2classes>
+
+                    <col3classes>
+                        <TCEforms>
+                            <label>LLL:EXT:grid_for_gridelements/Resources/Private/Language/locallang.xlf:grid.classes.col3</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectMultipleSideBySide</renderType>
+                                <itemsProcFunc>SchmidtWebmedia\GridForGridElements\Controller\GridController->getClassesOptions</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </col3classes>
+
+                    <col4classes>
+                        <TCEforms>
+                            <label>LLL:EXT:grid_for_gridelements/Resources/Private/Language/locallang.xlf:grid.classes.col4</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectMultipleSideBySide</renderType>
+                                <itemsProcFunc>SchmidtWebmedia\GridForGridElements\Controller\GridController->getClassesOptions</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </col4classes>
                 </el>
             </ROOT>
         </col>

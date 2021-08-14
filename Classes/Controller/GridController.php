@@ -56,5 +56,13 @@ class GridController
         $config['items'] = array_merge($config['items'], $columnRatioList);
         return $config;
     }
+    
+    
+    public function getClassesOptions($config) {
+      self::readJSON();
+      $config['items'] = self::$GridConfiguration['classes'];
+      return $config;
+    }
+    
 }
 
